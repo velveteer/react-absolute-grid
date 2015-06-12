@@ -15,10 +15,12 @@ export default class GridItem extends BaseDisplayObject{
     //IMPORTANT: Without the style, nothing happens :(
     var itemStyle = super.getStyle.call(this);
 
-    return <div
-            onMouseDown={this.onDrag}
-            onMouseOver={this.onMouseOver}
-            style={itemStyle}
-            className="gridItem">{this.props.item.name}</div>;
+    return (
+      <div
+        onMouseDown={this.onDrag}
+        onMouseOver={this.onMouseOver}
+        style={itemStyle}
+        className="gridItem">{this.props.item.name}</div>
+    );
   }
 }
